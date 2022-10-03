@@ -8,5 +8,5 @@ let x = 50;
 let h = 5;
 let y = 10;
 
-// 1.4 Crea una otra variable 'z' y asignale el valor de 'h' + 'y'.n
+// 1.4 Crea una otra variable 'z' y asignale el valor de 'h' + 'y'.
 let z = h + y;
