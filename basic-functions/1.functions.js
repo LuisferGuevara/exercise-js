@@ -114,3 +114,33 @@ function averageWord(param) {
 }
 
 console.log(averageWord(mixedElements));
+
+// **teración #6: Valores únicos**
+
+// Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados. Puedes usar este array para probar tu función:
+
+const duplicates = [
+  'sushi',
+  'pizza',
+  'burger',
+  'potatoe',
+  'pasta',
+  'ice-cream',
+  'pizza',
+  'chicken',
+  'onion rings',
+  'pasta',
+  'soda'
+];
+function removeDuplicates(param) {
+  let arraySinDuplicados = []
+
+  for (let h = 0; h < param.length; h++) {
+  console.log(h)
+  if(!arraySinDuplicados.includes(param[h])){
+    arraySinDuplicados.push(param[h])
+  }
+  }
+  return arraySinDuplicados
+}
+console.log(removeDuplicates(duplicates))
