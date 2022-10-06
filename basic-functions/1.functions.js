@@ -44,6 +44,8 @@ console.log('Tu edad es', ageCalculator(1997));
 // Puedes usar este array para probar tu función:
 
 const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
+
+// Opcion 1
 function findLongestWord(param) {
 
     let longest = ' ';
@@ -58,7 +60,30 @@ function findLongestWord(param) {
  
 }
 
-// console.log(findLongestWord(avengers));
+console.log('The longest string in your array is : ' + findLongestWord(avengers));
+
+// Opcion 2
+
+function findLongestWord (array) {
+    let longestWord = array[0];
+    /* for (const element of array) {
+        if (longestWord.length < element.length) {
+            longestWord = element;
+        }
+    } */
+    for (let i = 1; i < array.length; i++) {
+        const element = array[i];
+        if (longestWord.length < element.length) {
+            longestWord = element;
+        }
+    }
+    return longestWord;
+}
+console.log(findLongestWord(avengers));
+
+// Opcion 3
+
+
 
 // **teración #3: Calcular la suma**
 
@@ -136,7 +161,6 @@ function removeDuplicates(param) {
   let arraySinDuplicados = []
 
   for (let h = 0; h < param.length; h++) {
-  console.log(h)
   if(!arraySinDuplicados.includes(param[h])){
     arraySinDuplicados.push(param[h])
   }
@@ -144,3 +168,54 @@ function removeDuplicates(param) {
   return arraySinDuplicados
 }
 console.log(removeDuplicates(duplicates))
+
+// **Iteración #7: Buscador de nombres**
+
+// Crea una función que reciba por parámetro un array y el valor que desea comprobar que existe dentro de dicho array - comprueba si existe el elemento, en caso que existan nos devuelve la posición de dicho elemento y por la contra un false. Puedes usar este array para probar tu función:
+
+const nameFinder = [
+  'Peter',
+  'Steve',
+  'Tony',
+  'Natasha',
+  'Clint',
+  'Logan',
+  'Xabier',
+  'Bruce',
+  'Peggy',
+  'Jessica',
+  'Marc'
+];
+
+function finderName(param, nameToFind) {
+  for (let m = 0; m < param.length; m++) {
+    if(param[m] === nameToFind){
+      return `Tu nombre existe en el array: ${true}  y es el índice: ${param.indexOf(nameToFind)}`
+    }
+  }
+  return false
+}
+
+console.log(finderName(nameFinder, 'Peggy'));
+
+
+
+// **Iteration #8: Contador de repeticiones**
+
+// Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.  Puedes usar este array para probar tu función:
+const counterWords = [
+  'code',
+  'repeat',
+  'eat',
+  'sleep',
+  'code',
+  'enjoy',
+  'sleep',
+  'code',
+  'enjoy',
+  'upgrade',
+  'code'
+];
+function repeatCounter(param) {
+  // insert code
+}
