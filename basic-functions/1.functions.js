@@ -131,8 +131,6 @@ function averageWord(param) {
   for (let j = 0; j < param.length; j++) {
     if( typeof param[j] === 'string'){
     suma += param[j].length
-    console.log(param[j])
-      console.log(suma)
     }
   }
   return ('El promedio de este Arrays es: ' + suma / param.length)
@@ -199,7 +197,6 @@ function finderName(param, nameToFind) {
 console.log(finderName(nameFinder, 'Peggy'));
 
 
-
 // **Iteration #8: Contador de repeticiones**
 
 // Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.  Puedes usar este array para probar tu función:
@@ -216,6 +213,16 @@ const counterWords = [
   'upgrade',
   'code'
 ];
+
 function repeatCounter(param) {
-  // insert code
+  let cont = {};
+  for (let a = 0; a < param.length; a++) {
+    if ( param[a] in cont){
+      cont[param[a]]++
+    } else{
+      cont[param[a]] = 1
+    }
+  }
+  return cont
 }
+console.log(repeatCounter(counterWords));
