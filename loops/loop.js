@@ -76,6 +76,39 @@ for(const alumn of alumns){
 console.log(alumns);
 
 
+// **Iteración #3: Probando For...of**
+
+// Usa un bucle forof para recorrer todos los destinos del array. Imprime en un ***console.log*** sus valores.
+
+const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar'];
+
+function visit(param){
+    for(const place of param){
+        console.log(place)
+    }
+}
+console.log(visit(placesToTravel));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function dormirBebe(baby){
 //     console.log('Duermete niño, duermete ya...');
 // }
